@@ -2,6 +2,9 @@ numpy
 pandas
 torch
 torchvision
+torchsummary
 kaggle
 kagglehub
 ipywidgets
+IPython
+matplotlib
