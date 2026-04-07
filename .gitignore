@@ -1,1 +1,4 @@
-./data
+data
+data/dataset/test_images
+data/dataset/train_images
+data/dataset/train_solution.csv
