@@ -10,3 +10,4 @@ ipywidgets
 IPython
 matplotlib
 scikit-learn
+tqdm
