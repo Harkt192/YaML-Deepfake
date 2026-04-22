@@ -2,6 +2,12 @@ numpy
 pandas
 torch
 torchvision
+torchsummary
+torchmetrics
 kaggle
 kagglehub
 ipywidgets
+IPython
+matplotlib
+scikit-learn
+tqdm
