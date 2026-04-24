@@ -80,7 +80,7 @@ dataset/                     # Директория с датасетом
 
 ### Аугментации (Train)
 
-Для улучшения обобщающей способности модели применяются следующие аугментации:
+Для улучшения обобщающей способности модели применяются следующие аугментации на тренировочных данных:
 
 ```python
 train_transform = transforms.Compose([
@@ -159,7 +159,7 @@ base_transform = transforms.Compose([
 8) Linear(512, 1)
 ```
 
-Такая архитектура уменьшает количество параметров, сохраняя высокую выразительную способность сети.
+Такая архитектура уменьшает количество параметров, сохраняя высокую продуктивность сети.
 
 ---
 
@@ -204,7 +204,7 @@ scheduler = optim.lr_scheduler.ReduceLROnPlateau(
 )
 ```
 
-Scheduler обновляет learning rate после каждой эпохи.
+Scheduler обновляет learning rate при отсутствии улучшения результата за последние 2 эпохи.
 
 ---
 
@@ -214,10 +214,10 @@ Scheduler обновляет learning rate после каждой эпохи.
 ```python
 train_loader = DataLoader(
     train_dataset,
-    batch_size=32,
+    batch_size=128,
     shuffle=True,
     num_workers=4,
-    pin_memory=True
+    # pin_memory=True  # используется, при достаточном объёме ОЗУ
 )
 ```
 
