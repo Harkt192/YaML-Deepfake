@@ -208,27 +208,6 @@ Scheduler обновляет learning rate после каждой эпохи.
 
 ---
 
-### Цикл обучения
-
-Прогресс обучения отображается с помощью **tqdm**:
-
-```python
-for epoch in range(num_epochs):
-    loop = tqdm(train_loader)
-
-    for images, labels in loop:
-        optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, labels)
-        loss.backward()
-        optimizer.step()
-
-        loop.set_description(f"Epoch [{epoch}]")
-        loop.set_postfix(loss=loss.item())
-```
-
----
-
 ## Параметры DataLoader
 
 
@@ -311,6 +290,6 @@ main.ipynb
 
 ## Авторы
 
-Воробченко Артём
-Ковалёв Сергей
+Воробченко Артём<br/>
+Ковалёв Сергей<br/>
 Фролов Иван
